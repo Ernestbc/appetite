@@ -19,6 +19,7 @@ import com.example.jrpotter.appetite.tool.session.UserSession;
 import com.facebook.Session;
 import com.facebook.SessionState;
 import com.facebook.UiLifecycleHelper;
+import com.facebook.widget.LoginButton;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.plus.Plus;
@@ -72,6 +73,9 @@ public class LoginSubActivity extends ActionBarActivity implements
         super.onCreate(savedInstanceState);
         setContentView(contentView);
 
+        // Initialize
+        UserSession.getInstance(this);
+
         // Google+ Setup
         findViewById(R.id.include_login_method_google_plus).setOnClickListener(this);
         mGoogleApiClient = new GoogleApiClient.Builder(this)
@@ -82,6 +86,8 @@ public class LoginSubActivity extends ActionBarActivity implements
                 .build();
 
         // Facebook Setup
+        LoginButton lb = (LoginButton) findViewById(R.id.include_login_method_facebook);
+        lb.setReadPermissions("email");
         uiHelper = new UiLifecycleHelper(this, callback);
         uiHelper.onCreate(savedInstanceState);
     }
@@ -157,6 +163,7 @@ public class LoginSubActivity extends ActionBarActivity implements
 
     @Override
     public void onConnected(Bundle bundle) {
+        UserSession.getInstance().instantiateSession(UserSession.SESSION_TYPE.GOOGLE_PLUS);
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
         finish();
@@ -164,7 +171,7 @@ public class LoginSubActivity extends ActionBarActivity implements
 
     @Override
     public void onConnectionSuspended(int i) {
-
+        // Intentionally Empty
     }
 
     /* A helper method to resolve the current ConnectionResult error. */
@@ -197,6 +204,7 @@ public class LoginSubActivity extends ActionBarActivity implements
 
     private void onSessionStateChange(Session session, SessionState state, Exception exception) {
         if(state.isOpened()) {
+            UserSession.getInstance().instantiateSession(UserSession.SESSION_TYPE.FACEBOOK);
             Intent intent = new Intent(this, MainActivity.class);
             startActivity(intent);
             finish();
@@ -255,8 +263,9 @@ public class LoginSubActivity extends ActionBarActivity implements
     /**
      * Lets the user into the application, saving their credentials.
      */
-    public void login(String email, String password) {
-        UserSession.getInstance().login(email, password);
+    public void login(String name, String email, String password) {
+        UserSession.getInstance().login(name, email, password);
+        UserSession.getInstance().instantiateSession(UserSession.SESSION_TYPE.APPETITE);
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
         finish();

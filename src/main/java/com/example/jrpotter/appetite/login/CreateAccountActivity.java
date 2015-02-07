@@ -71,7 +71,7 @@ public class CreateAccountActivity extends LoginSubActivity {
                 try {
                     if(result.getInt("code") == 0) {
                         Toast.makeText(CreateAccountActivity.this, "Account Created", Toast.LENGTH_SHORT).show();
-                        login(email.getText().toString(), password.getText().toString());
+                        login(result.getString("name"), email.getText().toString(), password.getText().toString());
                     } else {
                         // TODO: Show error messages
                     }

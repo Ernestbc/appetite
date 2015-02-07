@@ -31,6 +31,7 @@ public class UserStorage {
     public static final String STATE_FRAGMENT_ADDED = "state_fragment_added";
 
     public static final String PREF_LOGGED_IN = "pref_logged_in";
+    public static final String PREF_CREDENTIALS_NAME = "pref_credentials_name";
     public static final String PREF_CREDENTIALS_EMAIL = "pref_credentials_email";
     public static final String PREF_CREDENTIALS_PASSWORD = "pref_credentials_password";
 

@@ -21,7 +21,13 @@ public class UserSession {
     private static Activity mContext;
     private static UserSession instance;
 
-    public static enum SESSION_TYPE { GOOGLE_PLUS, FACEBOOK, APPETITE, NONE };
+    public enum SESSION_TYPE { GOOGLE_PLUS, FACEBOOK, APPETITE, NONE }
+
+
+    // Instance Members
+    // ==================================================
+
+    public SESSION_TYPE sessionType = SESSION_TYPE.NONE;
 
 
     // Session Methods
@@ -34,11 +40,12 @@ public class UserSession {
      * @param email User's email
      * @param password User's password
      */
-    public void login(String email, String password) {
+    public void login(String name, String email, String password) {
 
         // Save Credentials
         SharedPreferences.Editor editor = UserStorage.getInstance().getPrefEditor();
         editor.putBoolean(UserStorage.PREF_LOGGED_IN, true);
+        editor.putString(UserStorage.PREF_CREDENTIALS_NAME, name);
         editor.putString(UserStorage.PREF_CREDENTIALS_EMAIL, email);
         editor.putString(UserStorage.PREF_CREDENTIALS_PASSWORD, password);
         editor.apply();
@@ -64,9 +71,19 @@ public class UserSession {
         SharedPreferences.Editor editor = UserStorage.getInstance().getPrefEditor();
         editor.remove(UserStorage.PREF_CREDENTIALS_PASSWORD);
         editor.remove(UserStorage.PREF_CREDENTIALS_EMAIL);
+        editor.remove(UserStorage.PREF_CREDENTIALS_NAME);
         editor.remove(UserStorage.PREF_LOGGED_IN);
         editor.commit();
 
+    }
+
+    /**
+     * Finds out user information.
+     *
+     * @param type ""
+     */
+    public void instantiateSession(SESSION_TYPE type) {
+        sessionType = type;
     }
 
 

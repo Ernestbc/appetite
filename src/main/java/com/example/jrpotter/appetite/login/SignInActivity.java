@@ -69,7 +69,7 @@ public class SignInActivity extends LoginSubActivity  {
                 try {
                     if(result.getInt("code") == 0) {
                         Toast.makeText(SignInActivity.this, "Logged In", Toast.LENGTH_SHORT).show();
-                        login(email.getText().toString(), password.getText().toString());
+                        login(result.getString("name"), email.getText().toString(), password.getText().toString());
                     } else {
                         // TODO: Show error message
                     }

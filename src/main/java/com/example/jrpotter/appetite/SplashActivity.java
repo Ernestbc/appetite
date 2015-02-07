@@ -4,10 +4,10 @@ import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.util.Log;
 
 import com.example.jrpotter.appetite.login.LoginActivity;
 import com.example.jrpotter.appetite.tool.UserStorage;
+import com.example.jrpotter.appetite.tool.session.UserSession;
 import com.facebook.Session;
 import com.facebook.SessionState;
 import com.facebook.UiLifecycleHelper;
@@ -50,6 +50,9 @@ public class SplashActivity extends Activity implements
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        // Initialize
+        UserSession.getInstance(this);
 
         // Google+ Setup
         new GoogleApiClient.Builder(this)
@@ -114,6 +117,7 @@ public class SplashActivity extends Activity implements
      */
     @Override
     public void onConnected(Bundle bundle) {
+        UserSession.getInstance().instantiateSession(UserSession.SESSION_TYPE.GOOGLE_PLUS);
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
         finish();
@@ -141,6 +145,7 @@ public class SplashActivity extends Activity implements
         } else {
             SharedPreferences pref = UserStorage.getInstance(SplashActivity.this).getPref();
             if(!pref.getBoolean(UserStorage.PREF_LOGGED_IN, false)) {
+                UserSession.getInstance().instantiateSession(UserSession.SESSION_TYPE.APPETITE);
                 Intent intent = new Intent(SplashActivity.this, LoginActivity.class);
                 startActivity(intent);
             } else {
@@ -155,6 +160,7 @@ public class SplashActivity extends Activity implements
     // ==================================================
 
     private void onSessionStateChange() {
+        UserSession.getInstance().instantiateSession(UserSession.SESSION_TYPE.FACEBOOK);
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
         finish();

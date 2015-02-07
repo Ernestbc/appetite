@@ -3,6 +3,8 @@ package com.example.jrpotter.appetite.tool;
 import android.content.SharedPreferences;
 import android.util.Log;
 
+import com.facebook.model.GraphUser;
+
 import java.io.BufferedReader;
 import java.io.DataOutputStream;
 import java.io.IOException;
@@ -35,8 +37,17 @@ public class SiteConnection {
     public static final String CATER_SEARCH_URL = CATER_URL + "tags/venue_search/";
     public static final String CATER_CREATE_URL = CATER_URL + "user/create/";
     public static final String CATER_LOGIN_URL = CATER_URL + "user/login/";
+    public static final String CATER_PROFILE_URL = CATER_URL + "user/profile/";
     public static final String CATER_RECENT_SAVE_URL = CATER_URL + "recent/save/";
     public static final String CATER_RECENT_LOAD_URL = CATER_URL + "recent/load/";
+
+
+    // Facebook Methods
+    // ==================================================
+
+    public static String getFacebookImageURL(GraphUser user) {
+        return "http://graph.facebook.com/"+ user.getId()+ "/picture?width=200&height=200";
+    }
 
 
     // Internet Methods
