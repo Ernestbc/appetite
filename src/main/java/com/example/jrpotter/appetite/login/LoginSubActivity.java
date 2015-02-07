@@ -5,7 +5,6 @@ import android.content.IntentSender;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
-import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,7 +12,7 @@ import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 
-import com.example.jrpotter.appetite.MainActivity;
+import com.example.jrpotter.appetite.main.MainActivity;
 import com.example.jrpotter.appetite.R;
 import com.example.jrpotter.appetite.tool.session.UserSession;
 import com.facebook.Session;

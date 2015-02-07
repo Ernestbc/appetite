@@ -6,6 +6,7 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import com.example.jrpotter.appetite.login.LoginActivity;
+import com.example.jrpotter.appetite.main.MainActivity;
 import com.example.jrpotter.appetite.tool.UserStorage;
 import com.example.jrpotter.appetite.tool.session.UserSession;
 import com.facebook.Session;
@@ -143,7 +144,7 @@ public class SplashActivity extends Activity implements
 
         // Try to login via Appetite
         } else {
-            SharedPreferences pref = UserStorage.getInstance(SplashActivity.this).getPref();
+            SharedPreferences pref = UserStorage.getPreferences(this);
             if(!pref.getBoolean(UserStorage.PREF_LOGGED_IN, false)) {
                 UserSession.getInstance().instantiateSession(UserSession.SESSION_TYPE.APPETITE);
                 Intent intent = new Intent(SplashActivity.this, LoginActivity.class);

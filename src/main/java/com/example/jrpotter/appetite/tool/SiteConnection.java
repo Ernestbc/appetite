@@ -55,13 +55,6 @@ public class SiteConnection {
 
     public static String getPost(HashMap<String, String> data) {
 
-        // Add credentials to data (if logged in)
-        SharedPreferences pref = UserStorage.getInstance(null).getPref();
-        if(pref.getBoolean(UserStorage.PREF_LOGGED_IN, false)) {
-            data.put("email", pref.getString(UserStorage.PREF_CREDENTIALS_EMAIL, ""));
-            data.put("password", pref.getString(UserStorage.PREF_CREDENTIALS_PASSWORD, ""));
-        }
-
         // Build up request
         StringBuilder request = new StringBuilder();
         for(String key : data.keySet()) {
@@ -81,8 +74,8 @@ public class SiteConnection {
 
     /**
      *
-     * @param data
-     * @return
+     * @param data ""
+     * @return ""
      */
     public static byte[] getPostData(HashMap<String, String> data) {
         return getPost(data).getBytes(Charset.forName("utf-8"));

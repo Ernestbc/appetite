@@ -65,7 +65,7 @@ public class ProfileView extends RelativeLayout implements
         switch(type) {
 
             case APPETITE: {
-                SharedPreferences pref = UserStorage.getInstance().getPref();
+                SharedPreferences pref = UserStorage.getPreferences(context);
                 nameView.setText(pref.getString(UserStorage.PREF_CREDENTIALS_NAME, ""));
                 emailView.setText(pref.getString(UserStorage.PREF_CREDENTIALS_EMAIL, ""));
                 break;

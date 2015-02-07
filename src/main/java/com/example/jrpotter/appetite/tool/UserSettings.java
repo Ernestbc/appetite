@@ -45,7 +45,7 @@ public class UserSettings {
     // ==================================================
 
     public int getRadius(boolean inMeters) {
-        SharedPreferences sharedPref = UserStorage.getInstance(mContext).getPref();
+        SharedPreferences sharedPref = UserStorage.getPreferences(mContext);
         int radiusDefault = mContext.getResources().getInteger(R.integer.settings_drawer_radius_def);
         int radius = sharedPref.getInt(UserStorage.PREF_SETTINGS_RADIUS, radiusDefault);
         if(inMeters) {

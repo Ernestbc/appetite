@@ -4,7 +4,7 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 
 import com.example.jrpotter.appetite.drawer.DrawerFragment;
-import com.example.jrpotter.appetite.main.SwingsFragment;
+import com.example.jrpotter.appetite.mood.SwingsFragment;
 import com.example.jrpotter.appetite.tool.SiteConnection;
 
 import java.util.HashMap;

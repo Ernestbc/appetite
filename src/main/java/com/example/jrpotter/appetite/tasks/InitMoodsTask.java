@@ -5,7 +5,7 @@ import android.os.Bundle;
 
 import com.example.jrpotter.appetite.drawer.DrawerFragment;
 import com.example.jrpotter.appetite.drawer.SubDrawerFragment;
-import com.example.jrpotter.appetite.main.MoodsFragment;
+import com.example.jrpotter.appetite.mood.MoodsFragment;
 import com.example.jrpotter.appetite.tool.SiteConnection;
 
 import java.util.HashMap;

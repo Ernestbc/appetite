@@ -1,4 +1,4 @@
-package com.example.jrpotter.appetite.main;
+package com.example.jrpotter.appetite.mood;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -20,7 +20,7 @@ import com.example.jrpotter.appetite.tasks.InitSwingsTask;
  *
  * Created by jrpotter on 12/31/14.
  */
-public class MainDrawerFragment extends DrawerFragment {
+public class MoodDrawerFragment extends DrawerFragment {
 
     // Hook Methods
     // ==================================================

@@ -15,7 +15,7 @@
     </array>
 
     <string-array name="drawer_classes">
-        <item>com.example.jrpotter.appetite.main.MainDrawerFragment</item>
+        <item>com.example.jrpotter.appetite.mood.MoodDrawerFragment</item>
         <!--<item>com.example.jrpotter.appetite.recents.RecentsDrawerFragment</item>
         <item>com.example.jrpotter.appetite.favs.FavoritesDrawerFragment</item>-->
         <item>com.example.jrpotter.appetite.settings.SettingsDrawerFragment</item>

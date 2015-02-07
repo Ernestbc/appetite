@@ -62,7 +62,7 @@
 
         <!-- Main Activity -->
         <activity
-            android:name=".MainActivity"
+            android:name=".main.MainActivity"
             android:label="@string/main_activity_title"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.TranslucentActionBar" />

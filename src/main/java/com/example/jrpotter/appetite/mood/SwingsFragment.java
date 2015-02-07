@@ -1,4 +1,4 @@
-package com.example.jrpotter.appetite.main;
+package com.example.jrpotter.appetite.mood;
 
 import android.os.Bundle;
 import android.util.Log;
@@ -61,7 +61,7 @@ public class SwingsFragment extends SubDrawerFragment {
                 View.OnClickListener listener = new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        ((MainDrawerFragment) mParent).selectSwing(v);
+                        ((MoodDrawerFragment) mParent).selectSwing(v);
                     }
                 };
 

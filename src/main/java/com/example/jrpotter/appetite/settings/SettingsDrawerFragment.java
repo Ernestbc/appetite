@@ -56,7 +56,7 @@ public class SettingsDrawerFragment extends DrawerFragment {
 
             @Override
             public void onStopTrackingTouch(SeekBar seekBar) {
-                SharedPreferences.Editor editor = UserStorage.getInstance(null).getPrefEditor();
+                SharedPreferences.Editor editor = UserStorage.getPreferencesEditor(getActivity());
                 editor.putInt(UserStorage.PREF_SETTINGS_RADIUS, seekBar.getProgress() + seekBarMinimum);
                 editor.commit();
             }

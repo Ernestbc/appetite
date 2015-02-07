@@ -43,7 +43,7 @@ public class UserSession {
     public void login(String name, String email, String password) {
 
         // Save Credentials
-        SharedPreferences.Editor editor = UserStorage.getInstance().getPrefEditor();
+        SharedPreferences.Editor editor = UserStorage.getPreferencesEditor(mContext);
         editor.putBoolean(UserStorage.PREF_LOGGED_IN, true);
         editor.putString(UserStorage.PREF_CREDENTIALS_NAME, name);
         editor.putString(UserStorage.PREF_CREDENTIALS_EMAIL, email);
@@ -68,7 +68,7 @@ public class UserSession {
         }
 
         // Remove Appetite Credentials
-        SharedPreferences.Editor editor = UserStorage.getInstance().getPrefEditor();
+        SharedPreferences.Editor editor = UserStorage.getPreferencesEditor(mContext);
         editor.remove(UserStorage.PREF_CREDENTIALS_PASSWORD);
         editor.remove(UserStorage.PREF_CREDENTIALS_EMAIL);
         editor.remove(UserStorage.PREF_CREDENTIALS_NAME);
@@ -108,7 +108,7 @@ public class UserSession {
     // ==================================================
 
     private UserSession() {
-        UserStorage.getInstance(mContext);
+        // Intentionally Empty
     }
 
 }

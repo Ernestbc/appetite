@@ -12,23 +12,8 @@ import com.example.jrpotter.appetite.R;
  */
 public class UserStorage {
 
-    // Static Members
-    // ==================================================
-
-    private static Activity mContext;
-    private static UserStorage instance;
-
-    // Preferences
-    private static String mSharedPrefFile;
-    private static SharedPreferences mSharedPref;
-    private static SharedPreferences.Editor mSharedPrefEditor;
-
-
     // Static Keys
     // ==================================================
-
-    // Activity Lifecycle
-    public static final String STATE_FRAGMENT_ADDED = "state_fragment_added";
 
     public static final String PREF_LOGGED_IN = "pref_logged_in";
     public static final String PREF_CREDENTIALS_NAME = "pref_credentials_name";
@@ -42,47 +27,25 @@ public class UserStorage {
     // ==================================================
 
     /**
+     * Return the file where settings are saved.
      *
+     * @param activity ""
      * @return ""
      */
-    public static UserStorage getInstance() {
-        return getInstance(null);
+    public static SharedPreferences getPreferences(Activity activity) {
+        String sharedPrefFile = activity.getString(R.string.shared_preference_key);
+        return activity.getSharedPreferences(sharedPrefFile, Context.MODE_PRIVATE);
     }
 
     /**
-     * Allow the user to set the initial context of the storage.
+     * Return the corresponding editor for write access.
      *
-     * @param context ""
+     * @param activity ""
      * @return ""
      */
-    public static UserStorage getInstance(Activity context) {
-        if(instance == null || context != null) {
-            mContext = context;
-            instance = new UserStorage();
-        }
-
-        return instance;
-    }
-
-    public final SharedPreferences getPref() {
-        return mSharedPref;
-    }
-
-    public final SharedPreferences.Editor getPrefEditor() {
-        return mSharedPrefEditor;
-    }
-
-
-    // Private Constructor
-    // ==================================================
-
-    /**
-     * Setup preferences file and database.
-     */
-    private UserStorage() {
-        mSharedPrefFile = mContext.getString(R.string.shared_preference_key);
-        mSharedPref = mContext.getSharedPreferences(mSharedPrefFile, Context.MODE_PRIVATE);
-        mSharedPrefEditor = mSharedPref.edit();
+    public static SharedPreferences.Editor getPreferencesEditor(Activity activity) {
+        SharedPreferences pref = getPreferences(activity);
+        return pref.edit();
     }
 
 }
