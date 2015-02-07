@@ -1,0 +1,25 @@
+<resources>
+
+    <!-- Login Dimensions -->
+    <dimen name="login_form_width">250dp</dimen>
+    <dimen name="login_google_plus_width">150dp</dimen>
+    <dimen name="activity_login_viewpager_height">120dp</dimen>
+    <dimen name="activity_login_button_height">90dp</dimen>
+    <dimen name="activity_login_icon_size">120dp</dimen>
+
+    <!-- Create Account Dimensions -->
+    <dimen name="activity_create_account_label_width">80dp</dimen>
+    <dimen name="activity_create_account_edit_width">255dp</dimen>
+
+    <!-- Sign In Dimensions -->
+    <dimen name="activity_sign_in_label_width">80dp</dimen>
+    <dimen name="activity_sign_in_edit_width">255dp</dimen>
+
+    <!-- Venue Detail Dimensions -->
+    <dimen name="fragment_venue_detail_button_width">250dp</dimen>
+
+    <!-- Default Android Dimensions -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+</resources>

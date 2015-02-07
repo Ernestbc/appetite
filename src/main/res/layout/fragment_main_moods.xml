@@ -1,0 +1,73 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="5dp">
+
+    <!-- Status -->
+    <LinearLayout
+        android:padding="5dp"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:text="@string/its"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/fragment_main_moods_time"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:text="@string/fragment_main_moods_question"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"/>
+
+    </LinearLayout>
+
+    <!-- Moods -->
+    <GridLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:columnCount="3"
+        android:rowCount="2"
+        tools:context="com.example.jrpotter.appetite.main.MoodsFragment">
+
+        <!-- First Row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_columnSpan="3"
+            android:layout_marginBottom="5dp">
+            <include android:id="@+id/activity_moods_mood1" layout="@layout/include_main_mood" />
+            <include android:id="@+id/activity_moods_mood2" layout="@layout/include_main_mood" />
+            <include android:id="@+id/activity_moods_mood3" layout="@layout/include_main_mood" />
+        </LinearLayout>
+
+        <!-- Second Row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_columnSpan="3">
+            <include android:id="@+id/activity_moods_mood4" layout="@layout/include_main_mood" />
+            <include android:id="@+id/activity_moods_mood5" layout="@layout/include_main_mood" />
+            <include android:id="@+id/activity_moods_mood6" layout="@layout/include_main_mood" />
+        </LinearLayout>
+
+    </GridLayout>
+
+</LinearLayout>

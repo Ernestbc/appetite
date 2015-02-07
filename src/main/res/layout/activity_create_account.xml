@@ -1,0 +1,111 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:background="@color/login_background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.jrpotter.appetite.login.CreateAccountActivity">
+
+    <!-- Header -->
+    <LinearLayout
+        android:id="@+id/activity_create_account_header"
+        android:orientation="horizontal"
+        android:layout_marginTop="25dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal" >
+
+        <ImageView
+            android:src="@drawable/ic_cloche"
+            android:layout_marginRight="20dp"
+            android:layout_width="@dimen/activity_login_icon_size"
+            android:layout_height="@dimen/activity_login_icon_size" />
+
+        <TextView
+            android:text="@string/activity_create_account_title"
+            android:textSize="40sp"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical" />
+
+    </LinearLayout>
+
+    <!-- Name -->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="30dp">
+
+        <TextView
+            android:text="@string/activity_create_account_name"
+            android:layout_width="@dimen/activity_create_account_label_width"
+            android:layout_height="wrap_content"
+            android:labelFor="@+id/activity_create_account_name"/>
+
+        <EditText
+            android:id="@+id/activity_create_account_name"
+            android:inputType="text"
+            android:layout_width="@dimen/activity_create_account_edit_width"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <!-- Email -->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:text="@string/activity_create_account_email"
+            android:layout_width="@dimen/activity_create_account_label_width"
+            android:layout_height="wrap_content"
+            android:labelFor="@+id/activity_create_account_email"/>
+
+        <EditText
+            android:id="@+id/activity_create_account_email"
+            android:inputType="textEmailAddress"
+            android:layout_width="@dimen/activity_create_account_edit_width"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <!-- Password -->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:text="@string/activity_create_account_password"
+            android:layout_width="@dimen/activity_create_account_label_width"
+            android:layout_height="wrap_content"
+            android:labelFor="@+id/activity_create_account_password"/>
+
+        <EditText
+            android:id="@+id/activity_create_account_password"
+            android:inputType="textPassword"
+            android:layout_width="@dimen/activity_create_account_edit_width"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <!-- Submit -->
+    <Button
+        android:id="@+id/activity_create_account_submit"
+        android:text="@string/activity_create_account_submit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center_horizontal"
+        android:onClick="createAccount" />
+
+    <!-- Alternative Sign In -->
+    <include layout="@layout/include_login_method" />
+
+</LinearLayout>

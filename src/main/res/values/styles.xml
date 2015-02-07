@@ -1,0 +1,21 @@
+<resources>
+
+    <!-- Translucent Action Bar -->
+    <style name="Widget.ActionBar" parent="@android:style/Widget.Holo.Light.ActionBar">
+
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:displayOptions">homeAsUp|showHome</item>
+
+        <!-- Support -->
+        <item name="background">@android:color/transparent</item>
+        <item name="displayOptions">homeAsUp|showHome</item>
+
+    </style>
+
+    <!-- Drawer Toggle Icon -->
+    <style name="DrawerArrowStyle" parent="Widget.AppCompat.DrawerArrowToggle">
+        <item name="spinBars">false</item>
+        <item name="color">@android:color/white</item>
+    </style>
+
+</resources>

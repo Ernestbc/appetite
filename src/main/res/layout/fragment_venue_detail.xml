@@ -1,0 +1,93 @@
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fragment_venue_detail_background"
+    tools:context="com.example.jrpotter.appetite.results.VenueDetailFragment">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Map View -->
+        <com.google.android.gms.maps.MapView
+            android:id="@+id/fragment_venue_detail_map"
+            android:layout_width="match_parent"
+            android:layout_height="250dp" />
+
+        <!-- Header -->
+        <TextView
+            android:id="@+id/fragment_venue_detail_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:textSize="22sp"
+            android:layout_gravity="center"
+            android:textAlignment="center" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:background="#55555555" />
+
+        <TextView
+            android:id="@+id/fragment_venue_detail_address_line"
+            android:textSize="14sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/fragment_venue_detail_locality_line"
+            android:textSize="14sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textAlignment="center" />
+
+        <!-- Buttons -->
+        <Button
+            android:id="@+id/fragment_venue_detail_directions"
+            android:layout_width="@dimen/fragment_venue_detail_button_width"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:paddingLeft="10dp"
+            android:text="@string/fragment_venue_detail_directions"
+            android:textColor="@android:color/white"
+            android:background="@color/fragment_venue_detail_button"
+            android:drawableLeft="@drawable/ic_truck" />
+
+        <Button
+            android:id="@+id/fragment_venue_detail_phone"
+            android:layout_width="@dimen/fragment_venue_detail_button_width"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp"
+            android:paddingLeft="10dp"
+            android:textColor="@android:color/white"
+            android:background="@color/fragment_venue_detail_button"
+            android:drawableLeft="@drawable/ic_phone" />
+
+        <Button
+            android:id="@+id/fragment_venue_detail_website"
+            android:layout_width="@dimen/fragment_venue_detail_button_width"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:paddingLeft="10dp"
+            android:text="@string/fragment_venue_detail_website_title"
+            android:textColor="@android:color/white"
+            android:background="@color/fragment_venue_detail_button"
+            android:drawableLeft="@drawable/ic_sphere" />
+
+    </LinearLayout>
+
+</ScrollView>

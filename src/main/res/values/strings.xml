@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Main Values -->
+    <string name="app_name">Appetite</string>
+    <string name="main_activity_title">MainActivity</string>
+    <string name="splash_activity_title">SplashActivity</string>
+    <string name="shared_preference_key">com.example.jrpotter.appetite.PREFERENCE_FILE_KEY</string>
+
+    <!-- 3rd Party Values -->
+    <string name="title_facebook">Facebook</string>
+    <string name="facebook_app_id">1529321270690230</string>
+
+    <!-- Action Bar -->
+    <string name="action_search">Search</string>
+    <string name="action_search_hint">Search</string>
+
+    <!-- Navigation Drawer -->
+    <string name="drawer_open">Drawer Open</string>
+    <string name="drawer_close">Drawer Close</string>
+
+    <!-- Login Activity -->
+    <string name="activity_login_title">LoginActivity</string>
+    <string name="activity_login_sign_in">Login</string>
+    <string name="activity_login_create_account">Create Account</string>
+    <string name="activity_login_email">Email</string>
+    <string name="activity_login_username">Username</string>
+    <string name="activity_login_password">Password</string>
+
+    <!-- Create Account Activity -->
+    <string name="activity_create_account_title">Create Account</string>
+    <string name="activity_create_account_name">Name</string>
+    <string name="activity_create_account_email">Email</string>
+    <string name="activity_create_account_password">Password</string>
+    <string name="activity_create_account_submit">Submit</string>
+
+    <!-- Sign In Activity -->
+    <string name="activity_sign_in_title">Sign In</string>
+    <string name="activity_sign_in_submit">Submit</string>
+
+    <!-- Main Activity -->
+    <string name="fragment_main_moods_question">What are you in the mood for?</string>
+    <string name="fragment_main_swings_header_start">You\'re feeling</string>
+    <string name="fragment_main_swings_header_end">Next, pick your food swing.</string>
+
+    <!-- Results Fragment -->
+    <string name="view_venue_peek_phone_title">Call Venue?</string>
+    <string name="view_venue_peek_website_title">Open URL?</string>
+    <string name="view_venue_loading_text">That\'s all she wrote!</string>
+    <string name="view_venue_loading_hint">(Try increasing your radius)</string>
+
+    <!-- Venue Detail Fragment -->
+    <string name="fragment_venue_detail_directions">Get Directions</string>
+    <string name="fragment_venue_detail_website_title">Enter Website</string>
+
+    <!-- Settings Drawer -->
+    <string name="settings_radius">Radius</string>
+
+    <!-- Miscellaneous Values -->
+    <string name="ok">OK</string>
+    <string name="its">It\'s</string>
+    <string name="option">or</string>
+    <string name="cancel">Cancel</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_create_account">CreateAccountActivity</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_sign_in">SignInActivity</string>
+    <string name="title_activity_search">SearchActivity</string>
+
+</resources>

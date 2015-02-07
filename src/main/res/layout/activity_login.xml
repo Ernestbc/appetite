@@ -1,0 +1,80 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/login_background"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.jrpotter.appetite.login.LoginActivity">
+
+    <!-- Text Describing Cater -->
+    <android.support.v4.view.ViewPager
+        android:id="@+id/activity_tutorial_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/activity_login_buttons"
+        android:layout_alignParentTop="true" />
+
+    <!-- Logo + Icon -->
+    <include layout="@layout/include_login_logo" />
+
+    <!-- Page View Indicators -->
+    <LinearLayout
+        android:id="@+id/activity_login_tutorial_indicator"
+        android:orientation="horizontal"
+        android:layout_width="42dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/activity_login_buttons">
+        <View
+            android:background="@drawable/shape_selected_indicator"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp"
+            android:layout_width="6dp"
+            android:layout_height="6dp" />
+        <View
+            android:background="@drawable/shape_unselected_indicator"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp"
+            android:layout_width="6dp"
+            android:layout_height="6dp" />
+        <View
+            android:background="@drawable/shape_unselected_indicator"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp"
+            android:layout_width="6dp"
+            android:layout_height="6dp" />
+    </LinearLayout>
+
+    <!-- Login Buttons -->
+    <LinearLayout
+        android:id="@+id/activity_login_buttons"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/activity_login_button_height"
+        android:layout_alignParentBottom="true" >
+
+        <Button
+            android:textColor="@android:color/white"
+            android:text="@string/activity_login_sign_in"
+            android:background="@color/login_sign_in"
+            style="?android:attr/buttonBarStyle"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="signIn" />
+
+        <Button
+            android:textColor="@android:color/white"
+            android:text="@string/activity_login_create_account"
+            android:background="@color/login_create_account"
+            style="?android:attr/buttonBarStyle"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="createAccount"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

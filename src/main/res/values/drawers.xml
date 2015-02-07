@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <array name="drawer_items">
+        <item>Home</item>
+        <item>@drawable/ic_home</item>
+        <!--<item>Recents</item>
+        <item>@drawable/ic_clock</item>
+        <item>Favorites</item>
+        <item>@drawable/ic_favorite</item>-->
+        <item>Settings</item>
+        <item>@drawable/ic_settings</item>
+        <item>Sign Out</item>
+        <item>@drawable/ic_sign_out</item>
+    </array>
+
+    <string-array name="drawer_classes">
+        <item>com.example.jrpotter.appetite.main.MainDrawerFragment</item>
+        <!--<item>com.example.jrpotter.appetite.recents.RecentsDrawerFragment</item>
+        <item>com.example.jrpotter.appetite.favs.FavoritesDrawerFragment</item>-->
+        <item>com.example.jrpotter.appetite.settings.SettingsDrawerFragment</item>
+        <item>null</item>
+    </string-array>
+
+</resources>

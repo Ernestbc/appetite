@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_weight="1"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="2.5dp"
+    android:layout_marginRight="2.5dp">
+
+    <!--
+        The image is wrapped in a FrameLayout for rounded corners. Refer to
+        @drawable/shape_rounded_frame for explanation.
+    -->
+    <RelativeLayout
+        android:id="@+id/include_main_mood_container"
+        android:background="@drawable/shape_rectangular_frame"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:padding="5dp">
+
+        <TextView
+            android:id="@+id/include_main_mood_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white" />
+
+        <ImageView
+            android:id="@+id/include_main_mood_image"
+            android:padding="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/include_main_mood_text"
+            android:layout_alignParentBottom="true" />
+
+    </RelativeLayout>
+
+</LinearLayout>

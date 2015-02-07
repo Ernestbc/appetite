@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    The following is used to create rounded corners on the mood images
+    displayed in the MoodsActivity grid.
+
+    This method was pulled from:
+    http://www.techrepublic.com/article/pro-tip-round-corners-on-an-android-imageview-with-this-hack/
+-->
+<shape
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:shape="rectangle">
+    <padding
+        android:left="4dp"
+        android:top="4dp"
+        android:right="4dp"
+        android:bottom="4dp" />
+    <corners android:radius="12dp" />
+    <stroke android:width="2dp" android:color="@android:color/white" />
+</shape> 

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- View Ids -->
+    <item name="loading_overview_id" type="id" />
+
+    <!-- Swings Tags -->
+    <item name="tags_main_swings_mood" type="id" />
+
+</resources>

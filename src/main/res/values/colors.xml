@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Tutorial -->
+    <color name="indicator_selected">#BBBBBB</color>
+    <color name="indicator_unselected">#FFFFFF</color>
+
+    <!-- Login -->
+    <color name="login_background">#fDE8E7</color>
+    <color name="login_background_text">#000000</color>
+    <color name="login_sign_in">#517614</color>
+    <color name="login_create_account">#AA4338</color>
+
+    <!-- Drawer -->
+    <color name="drawer_background">#FFFFFF</color>
+    <color name="drawer_text_color">#000000</color>
+    <color name="drawer_profile_text_color">#FFFFFF</color>
+    <color name="drawer_main_bar_background">#222222</color>
+
+    <!-- Main -->
+    <color name="main_background">#3F3E3E</color>
+    <color name="main_gradient_start">#8BCA25</color>
+    <color name="main_gradient_end">#EE5E4E</color>
+
+    <!-- Venue Detail -->
+    <color name="fragment_venue_detail_background">#EEEEEE</color>
+    <color name="fragment_venue_detail_button">#444444</color>
+
+</resources>
