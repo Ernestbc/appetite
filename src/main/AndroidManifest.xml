@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest
     xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.jrpotter.appetite" >
+    package="guru.apps.llc.appetite" >
 
     <!-- Permissions -->
     <uses-permission android:name="android.permission.INTERNET" />
@@ -23,7 +23,8 @@
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme" >
+        android:theme="@style/AppTheme"
+        android:name="guru.apps.llc.appetite.Appetite" >
 
         <!-- Libraries -->
         <uses-library android:name="com.google.android.maps" />
@@ -67,19 +68,6 @@
             android:screenOrientation="portrait"
             android:theme="@style/Theme.TranslucentActionBar" />
 
-        <!-- Search Activity -->
-        <activity
-            android:name=".results.SearchActivity"
-            android:label="@string/title_activity_search"
-            android:launchMode="singleTop">
-            <intent-filter>
-                <action android:name="android.intent.action.SEARCH" />
-            </intent-filter>
-            <meta-data
-                android:name="android.app.searchable"
-                android:resource="@xml/searchable" />
-        </activity>
-
         <!-- Facebook Activity -->
         <activity
             android:name="com.facebook.LoginActivity"
@@ -91,7 +79,7 @@
             android:value="@integer/google_play_services_version" />
         <meta-data
             android:name="com.google.android.maps.v2.API_KEY"
-            android:value="AIzaSyA6meIZjabu6dqniYpz1riNbLYzo7mqgQk" />
+            android:value="AIzaSyDfLRPYEiNJqR8Cmy2s-EXnAErhaGiX8l0" />
         <meta-data
             android:name="com.facebook.sdk.ApplicationId"
             android:value="@string/facebook_app_id" />

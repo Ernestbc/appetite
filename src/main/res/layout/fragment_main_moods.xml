@@ -45,7 +45,7 @@
         android:layout_marginTop="15dp"
         android:columnCount="3"
         android:rowCount="2"
-        tools:context="com.example.jrpotter.appetite.mood.MoodsFragment">
+        tools:context="guru.apps.llc.appetite.mood.MoodsFragment">
 
         <!-- First Row -->
         <LinearLayout

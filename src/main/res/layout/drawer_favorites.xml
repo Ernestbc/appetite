@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.jrpotter.appetite.favs.FavoritesDrawerFragment">
+    tools:context="guru.apps.llc.appetite.favs.FavoritesDrawerFragment">
 
     <RelativeLayout
         android:id="@+id/drawer_favorites_fragment_container"

@@ -4,7 +4,7 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    tools:context="com.example.jrpotter.appetite.mood.SwingsFragment">
+    tools:context="guru.apps.llc.appetite.mood.SwingsFragment">
 
     <!-- Status -->
     <TextView

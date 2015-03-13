@@ -5,7 +5,7 @@
     android:background="@color/login_background"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.jrpotter.appetite.login.CreateAccountActivity">
+    tools:context="guru.apps.llc.appetite.login.CreateAccountActivity">
 
     <!-- Header -->
     <LinearLayout

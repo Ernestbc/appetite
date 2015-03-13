@@ -1,8 +1,10 @@
 <resources>
 
-    <!-- Login Dimensions -->
+    <!-- Form Dimensions -->
     <dimen name="login_form_width">250dp</dimen>
     <dimen name="login_google_plus_width">150dp</dimen>
+
+    <!-- Login Dimensions -->
     <dimen name="activity_login_viewpager_height">120dp</dimen>
     <dimen name="activity_login_button_height">90dp</dimen>
     <dimen name="activity_login_icon_size">120dp</dimen>
